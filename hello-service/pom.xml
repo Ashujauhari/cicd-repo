@@ -51,12 +51,17 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
-				</configuration>
-			</plugin>
+				
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>repackage</goal> 
+						</goals>
+					</execution>
+				</executions>
+			</plugin>			
 		</plugins>
+		<finalName>hello</finalName>
 	</build>
-
 </project>
